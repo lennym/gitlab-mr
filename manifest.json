@@ -1,0 +1,15 @@
+{
+  "manifest_version": 2,
+
+  "name": "GitLab Merge Request",
+  "description": "Chrome extension to autofill GitLab merge request inputs for single-commit merge requests",
+  "version": "1.0",
+
+  "content_scripts": [
+    {
+      "matches": ["*://<GITLAB_URL>/**/merge_requests/new*"],
+      "js": ["jquery.js", "populate.js"],
+      "run_at": "document_end"
+    }
+  ]
+}
